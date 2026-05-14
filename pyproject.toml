@@ -1,0 +1,16 @@
+[project]
+name = "mygo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "psycopg[binary]>=3.3.4",
+    "pydantic-settings>=2.14.0",
+]
+
+[tool.uv.workspace]
+members = [
+    "services/auth",
+]
