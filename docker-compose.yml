@@ -28,8 +28,8 @@ services:
     env_file:
       - .env  
     environment:
-      AUTH_DB_HOST: postgres
-      AUTH_DB_PORT: 5432
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
     depends_on:
       postgres:
         condition: service_healthy
