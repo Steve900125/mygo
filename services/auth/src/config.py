@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     # ----- Database -----
     AUTH_DB_USER: str
     AUTH_DB_PASSWORD: str
-    AUTH_DB_HOST: str
+    POSTGRES_HOST: str
     POSTGRES_PORT: int
     AUTH_DB_NAME: str
 
@@ -38,7 +38,7 @@ class Settings(BaseSettings):
         return (
             f"postgresql+psycopg://"
             f"{self.AUTH_DB_USER}:{self.AUTH_DB_PASSWORD}"
-            f"@{self.AUTH_DB_HOST}:{self.POSTGRES_PORT}"
+            f"@{self.POSTGRES_HOST}:{self.POSTGRES_PORT}"
             f"/{self.AUTH_DB_NAME}"
         )
 
